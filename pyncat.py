@@ -25,7 +25,7 @@ class server:
         clientsocket.close()
         
     def trans(self,csocket,proxysocket):
-        rdata,wdata,edata = select.select([csocket,proxysocket],[],[],5)
+        rdata,wdata,edata = select.select([csocket,proxysocket],[],[],5) #非阻塞方式实现双工
         if csocket in rdata:
             data = csocket.recv(1024)
             if not data :return False
