@@ -11,7 +11,7 @@ class server:
         self.serversocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.serversocket.bind(('0.0.0.0',bport))
         self.serversocket.listen(multi)
-        self.dport=(pip,dport)
+        self.dport=(pip,pport)
         self.multi=multi
         self.plist=[]
         
