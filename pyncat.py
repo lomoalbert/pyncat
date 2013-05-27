@@ -37,7 +37,7 @@ class server:
         return True
             
     def run(self):
-        for mu in range(self.multi):
+        for mu in range(self.multi):#限制访问次数
             clientsocket , clientaddress = self.serversocket.accept()
             p = multiprocessing.Process(target=self.newconnect, args=(clientsocket, ))
             p.start()
