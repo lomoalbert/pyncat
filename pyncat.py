@@ -7,11 +7,11 @@ import multiprocessing
 import select
 
 class server:
-    def __init__(self,bport,dip,dport,multi):
+    def __init__(self,bport,pip,pport,multi):
         self.serversocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.serversocket.bind(('0.0.0.0',bport))
         self.serversocket.listen(multi)
-        self.dport=(dip,dport)
+        self.dport=(pip,dport)
         self.multi=multi
         self.plist=[]
         
