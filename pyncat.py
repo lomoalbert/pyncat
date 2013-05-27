@@ -7,7 +7,7 @@ import multiprocessing
 import select
 
 class server:
-    def __init__(self,bport,dip,dport,multi=1):
+    def __init__(self,bport,dip,dport,multi):
         self.serversocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.serversocket.bind(('0.0.0.0',bport))
         self.serversocket.listen(multi)
