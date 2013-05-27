@@ -50,8 +50,7 @@ class server:
         self.serversocket.close()
 
 def getargv():
-    parser = argparse.ArgumentParser(description="""python -m SimpleHTTPServer 8088 
-    python pyncat.py -l 8086 -i 127.0.0.1 -p 8088 -k 100""")
+    parser = argparse.ArgumentParser(description="""sudo python pyncat.py -l 80 -i www.google.com -p 80 -k 100""")
     parser.add_argument("-l", dest='bport',help="bind port",type=int,default=8086)
     parser.add_argument('-i', dest='pip',help='proxy ip',type=str,default='127.0.0.1')
     parser.add_argument('-p', dest='pport',help='proxy ip',type=int,default=8088)
